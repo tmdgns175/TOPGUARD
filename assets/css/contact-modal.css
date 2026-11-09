@@ -1,0 +1,21 @@
+.contact-open{border:0;cursor:pointer;font-family:inherit;line-height:1.65}
+.contact-modal{width:min(560px,calc(100% - 32px));max-height:min(760px,calc(100dvh - 32px));overflow:auto;padding:0;border:0;border-radius:14px;color:var(--ink);background:#fff;box-shadow:0 24px 80px rgba(2,10,26,.42)}
+.contact-modal::backdrop{background:rgba(4,12,26,.68);backdrop-filter:blur(4px)}
+.contact-modal__header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding:31px 34px 20px;border-bottom:1px solid var(--line)}
+.contact-modal__eyebrow{margin:0 0 4px;color:var(--blue);font:500 .7rem 'DM Mono',monospace;letter-spacing:.11em}
+.contact-modal h2{margin:0;font-size:2rem}
+.contact-modal__close{display:grid;place-items:center;width:36px;height:36px;padding:0;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--ink);font-size:1.55rem;line-height:1;cursor:pointer}
+.contact-modal__close:hover,.contact-modal__close:focus-visible{border-color:var(--blue);color:var(--blue)}
+.contact-modal__intro{margin:20px 34px 0;color:var(--muted);font-size:.9rem}
+.contact-form{padding:24px 34px 32px}
+.contact-form__field{margin-bottom:17px}
+.contact-form label{display:block;margin-bottom:7px;font-size:.86rem;font-weight:800}
+.contact-form input,.contact-form textarea{display:block;width:100%;border:1px solid var(--line);border-radius:7px;padding:11px 12px;color:var(--ink);font:400 .95rem Manrope,'Noto Sans KR',sans-serif;outline:none;resize:vertical}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,87,229,.12)}
+.contact-form__notice{margin:3px 0 21px;color:var(--muted);font-size:.78rem;line-height:1.55}
+.contact-form__actions{display:flex;justify-content:flex-end;gap:9px}
+.contact-form__actions button{border-radius:7px;padding:10px 14px;font-family:inherit;font-size:.86rem;font-weight:800;cursor:pointer}
+.contact-form__cancel{border:1px solid var(--line);background:#fff;color:var(--ink)}
+.contact-form__submit{border:1px solid var(--blue);background:var(--blue);color:#fff}
+.contact-form__status{min-height:1.5em;margin:12px 0 0;color:var(--blue);font-size:.8rem}
+@media(max-width:520px){.contact-modal{width:calc(100% - 20px);max-height:calc(100dvh - 20px);border-radius:11px}.contact-modal__header{padding:24px 22px 17px}.contact-modal__intro{margin:17px 22px 0}.contact-form{padding:21px 22px 26px}.contact-form__actions{flex-direction:column-reverse}.contact-form__actions button{width:100%}}
