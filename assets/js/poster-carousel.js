@@ -2,6 +2,7 @@
   const carousel = document.querySelector(".poster-carousel");
   if (!carousel) return;
   const slides = [...carousel.querySelectorAll(".poster-slide")];
+  // 포스터 내용 수정 행사분류/이름/설명 순
   const items = [
     ["AWARDS · 2025", "한터뮤직어워즈 2025", "HANTEO MUSIC AWARDS 2025"],
     [
@@ -24,6 +25,7 @@
       "2025 대한민국 대중문화예술상",
       "2025 KOREA POPULAR CULTURE AND ARTS AWARDS",
     ],
+    ["CONCERT· 2025", "2025 KBS 가요대축제", "2025 KBS 가요대축제"],
     ["CONCERT· 2026", "2026 싸이 흠뻑쇼", "2026 PSY 흠뻑쇼"],
     ["CONCERT· 2026", "2026 MBC 대학가요제", "2026 MBC 대학가요제"],
   ];
@@ -55,17 +57,20 @@
     });
     [category.textContent, title.textContent, subtitle.textContent] =
       items[index];
+
+    // 포스터 페이지 자동조절
     counter.textContent =
       String(index + 1).padStart(2, "0") +
       " / " +
-      String(slides.length).padstart(2, "0");
+      String(slides.length).padStart(2, "0");
     pauseButton.textContent = paused ? "자동재생" : "일시정지";
     pauseButton.setAttribute("aria-pressed", String(paused));
   }
   function schedule() {
     clearInterval(timer);
     if (!paused && !hovering)
-      timer = setInterval(() => change(index + 1, false), 5000);
+      // 포스터 넘어가는 시간 조절 5000=5초, 3000=3초
+      timer = setInterval(() => change(index + 1, false), 3000);
   }
   function change(next, restart = true) {
     index = (next + slides.length) % slides.length;
