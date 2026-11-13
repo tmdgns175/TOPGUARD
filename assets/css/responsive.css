@@ -59,10 +59,3 @@
   .hero h1{font-size:2.25rem}
   .cta{padding:10px 14px}
 }
-
-/* 메인 제목의 단어가 중간에서 끊어지는 현상 조정 */
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 5rem);
-  word-break: keep-all;
-  overflow-wrap: normal;
-}

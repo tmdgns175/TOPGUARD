@@ -1,0 +1,12 @@
+.poster-carousel{text-align:center;overflow:hidden}
+.poster-stage{position:relative;height:420px;max-width:900px;margin:0 auto;perspective:1200px}
+.poster-slide{position:absolute;top:50%;left:50%;height:390px;aspect-ratio:5/7;border:0;padding:0;border-radius:7px;overflow:hidden;background:#101d33;box-shadow:0 18px 40px rgba(12,22,38,.2);cursor:pointer;transition:transform .65s ease,opacity .65s ease,filter .65s ease;transform:translate(-50%,-50%) scale(.72);opacity:0;pointer-events:none}
+.poster-slide img{width:100%;height:100%;object-fit:contain;display:block}
+.poster-slide.is-current{transform:translate(-50%,-50%) scale(1);opacity:1;z-index:3;pointer-events:auto}
+.poster-slide.is-prev{transform:translate(calc(-50% - 255px),-50%) scale(.79) rotateY(12deg);opacity:.55;z-index:2;pointer-events:auto}
+.poster-slide.is-next{transform:translate(calc(-50% + 255px),-50%) scale(.79) rotateY(-12deg);opacity:.55;z-index:2;pointer-events:auto}
+.poster-slide:focus-visible,.poster-controls button:focus-visible{outline:3px solid #f48239;outline-offset:4px}
+.poster-caption{min-height:102px;margin:14px auto 0}.poster-category{font:500 .7rem 'DM Mono',monospace;letter-spacing:.12em;color:var(--blue)}.poster-caption h3{font-size:1.4rem;letter-spacing:-.04em;margin:6px 0 0}.poster-caption p{margin:4px 0;color:var(--muted);font-size:.82rem}
+.poster-controls{display:flex;align-items:center;justify-content:center;gap:17px}.poster-controls button{font:inherit;cursor:pointer}.poster-arrow{width:40px;height:40px;border:1px solid #bac6d8;border-radius:50%;background:#fff;color:var(--ink);font-size:1.2rem!important}.poster-counter{font:500 .8rem 'DM Mono',monospace;letter-spacing:.1em}.poster-counter i{font-style:normal;color:#9aa7b8;margin:0 5px}.poster-pause{border:0;background:none;color:var(--muted);font-size:.76rem!important;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:620px){.poster-stage{height:330px;margin-left:-16px;margin-right:-16px}.poster-slide{height:300px}.poster-slide.is-prev{transform:translate(calc(-50% - 145px),-50%) scale(.76) rotateY(12deg)}.poster-slide.is-next{transform:translate(calc(-50% + 145px),-50%) scale(.76) rotateY(-12deg)}.poster-caption{min-height:95px}.poster-caption h3{font-size:1.2rem}}
+@media(prefers-reduced-motion:reduce){.poster-slide{transition:none}}
